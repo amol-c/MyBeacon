@@ -22,6 +22,8 @@
 		3C0A14AF1863C99C00DC7AEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0A148E1863C99C00DC7AEE /* UIKit.framework */; };
 		3C0A14B71863C99C00DC7AEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0A14B51863C99C00DC7AEE /* InfoPlist.strings */; };
 		3C0A14B91863C99C00DC7AEE /* MyBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A14B81863C99C00DC7AEE /* MyBeaconTests.m */; };
+		3C0A14C31863CA2500DC7AEE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0A14C21863CA2500DC7AEE /* CoreLocation.framework */; };
+		3C58F2B41867D33E001878EB /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C58F2B31867D33E001878EB /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		3C0A14B41863C99C00DC7AEE /* MyBeaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyBeaconTests-Info.plist"; sourceTree = "<group>"; };
 		3C0A14B61863C99C00DC7AEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3C0A14B81863C99C00DC7AEE /* MyBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBeaconTests.m; sourceTree = "<group>"; };
+		3C0A14C21863CA2500DC7AEE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3C58F2B31867D33E001878EB /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0A14C31863CA2500DC7AEE /* CoreLocation.framework in Frameworks */,
+				3C58F2B41867D33E001878EB /* CoreBluetooth.framework in Frameworks */,
 				3C0A148D1863C99C00DC7AEE /* CoreGraphics.framework in Frameworks */,
 				3C0A148F1863C99C00DC7AEE /* UIKit.framework in Frameworks */,
 				3C0A148B1863C99C00DC7AEE /* Foundation.framework in Frameworks */,
@@ -103,6 +109,8 @@
 		3C0A14891863C99C00DC7AEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C58F2B31867D33E001878EB /* CoreBluetooth.framework */,
+				3C0A14C21863CA2500DC7AEE /* CoreLocation.framework */,
 				3C0A148A1863C99C00DC7AEE /* Foundation.framework */,
 				3C0A148C1863C99C00DC7AEE /* CoreGraphics.framework */,
 				3C0A148E1863C99C00DC7AEE /* UIKit.framework */,
@@ -202,6 +210,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Amol Chaudhari";
 				TargetAttributes = {
+					3C0A14861863C99C00DC7AEE = {
+						DevelopmentTeam = PNEW3T9XKD;
+					};
 					3C0A14AA1863C99C00DC7AEE = {
 						TestTargetID = 3C0A14861863C99C00DC7AEE;
 					};
@@ -392,10 +403,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyBeacon/MyBeacon-Prefix.pch";
 				INFOPLIST_FILE = "MyBeacon/MyBeacon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -405,10 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyBeacon/MyBeacon-Prefix.pch";
 				INFOPLIST_FILE = "MyBeacon/MyBeacon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +491,7 @@
 				3C0A14BE1863C99C00DC7AEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C0A14BF1863C99C00DC7AEE /* Build configuration list for PBXNativeTarget "MyBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +500,7 @@
 				3C0A14C11863C99C00DC7AEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

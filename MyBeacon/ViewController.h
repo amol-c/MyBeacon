@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+}
+@property(nonatomic) UILabel IBOutlet *enteredDistance;
 
+-(IBAction)scanIbeacons:(id)sender;
 @end
